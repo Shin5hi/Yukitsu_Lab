@@ -7,7 +7,7 @@
 [![Firebase](https://img.shields.io/badge/Database-Cloud%20Firestore-orange.svg)](https://firebase.google.com)
 [![Gemini](https://img.shields.io/badge/AI-Gemini%203.5%20%7C%20Veo%203.1-4285F4.svg)](https://ai.google.dev)
 
-**Yukitsu Studio** es una aplicación Android nativa diseñada para creadores, ilustradores y aficionados al anime. Combina la potencia de la inteligencia artificial generativa con el conocimiento profundo de las demografías, técnicas y épocas de la animación japonesa.
+**Yukitsu_Lab** es una aplicación Android nativa diseñada para creadores, ilustradores y aficionados al anime. Combina la potencia de la inteligencia artificial generativa con el conocimiento profundo de las demografías, técnicas y épocas de la animación japonesa.
 
 ---
 
