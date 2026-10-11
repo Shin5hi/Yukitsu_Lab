@@ -1,0 +1,6 @@
+{
+  "name": "Yukitsu Studio",
+  "description": "Estudio de creación y organización de imágenes, videos y GIFs de anime por demografía japonesa con carpetas y editor CSS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

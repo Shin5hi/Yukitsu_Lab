@@ -1,0 +1,250 @@
+{
+  "entities": {
+    "Folder": {
+      "title": "Folder",
+      "description": "Custom album, sketchbook, or category notebook for organizing anime creations",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Owner Google user ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the folder or sketchbook"
+        },
+        "color": {
+          "type": "string",
+          "description": "Theme color hex code for folder badge"
+        },
+        "icon": {
+          "type": "string",
+          "description": "Icon descriptor (e.g. folder, book, brush, sparkles)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Optional notes or description for this collection"
+        },
+        "itemCount": {
+          "type": "integer",
+          "description": "Number of creations contained in this folder"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of folder creation"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of last modification"
+        }
+      },
+      "required": ["userId", "name", "color", "icon", "itemCount", "createdAt", "updatedAt"]
+    },
+    "Creation": {
+      "title": "Creation",
+      "description": "Generated anime artwork, video, or animated GIF with style parameters and custom CSS",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Owner Google user ID"
+        },
+        "title": {
+          "type": "string",
+          "description": "User given title for the artwork"
+        },
+        "prompt": {
+          "type": "string",
+          "description": "Original text prompt"
+        },
+        "enhancedPrompt": {
+          "type": "string",
+          "description": "Director-level prompt expanded by Gemini"
+        },
+        "genre": {
+          "type": "string",
+          "enum": ["shonen", "seinen", "kodomo", "shojo", "josei", "mecha", "all"],
+          "description": "Anime genre / demographic classification"
+        },
+        "style": {
+          "type": "string",
+          "enum": ["retro_90s", "modern_digital", "manga_ink", "ghibli", "cyberpunk", "chibi", "watercolor"],
+          "description": "Japanese animation aesthetic style"
+        },
+        "mediaType": {
+          "type": "string",
+          "enum": ["image", "video", "gif"],
+          "description": "Format of the generated asset"
+        },
+        "mediaUrl": {
+          "type": "string",
+          "description": "Data URI or storage URL for preview"
+        },
+        "aspectRatio": {
+          "type": "string",
+          "enum": ["1:1", "16:9", "9:16", "4:3", "3:4", "2:3", "3:2", "21:9"],
+          "description": "Aspect ratio of creation"
+        },
+        "folderId": {
+          "type": "string",
+          "description": "ID of parent folder / sketchbook, or empty string if unfiled"
+        },
+        "tags": {
+          "type": "array",
+          "description": "Tag labels for categorization"
+        },
+        "customCss": {
+          "type": "string",
+          "description": "Custom CSS styling attached to this card/export"
+        },
+        "isFavorite": {
+          "type": "boolean",
+          "description": "Whether bookmarked as favorite"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of creation"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of last modification"
+        }
+      },
+      "required": ["userId", "title", "prompt", "genre", "style", "mediaType", "aspectRatio", "tags", "isFavorite", "createdAt", "updatedAt"]
+    },
+    "CommunityCreation": {
+      "title": "CommunityCreation",
+      "description": "Publicly shared anime creation in the community gallery with likes and remixes",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Author user ID"
+        },
+        "authorName": {
+          "type": "string",
+          "description": "Display name of author"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of public creation"
+        },
+        "prompt": {
+          "type": "string",
+          "description": "Prompt used"
+        },
+        "enhancedPrompt": {
+          "type": "string",
+          "description": "Enhanced prompt"
+        },
+        "genre": {
+          "type": "string",
+          "description": "Anime genre"
+        },
+        "style": {
+          "type": "string",
+          "description": "Anime style"
+        },
+        "mediaType": {
+          "type": "string",
+          "description": "image, video, or gif"
+        },
+        "mediaUrl": {
+          "type": "string",
+          "description": "Preview URL"
+        },
+        "aspectRatio": {
+          "type": "string",
+          "description": "Aspect ratio"
+        },
+        "tags": {
+          "type": "array",
+          "description": "Categorization tags"
+        },
+        "customCss": {
+          "type": "string",
+          "description": "Custom CSS styling"
+        },
+        "likesCount": {
+          "type": "integer",
+          "description": "Number of community votes/likes"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of creation"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of last update"
+        }
+      },
+      "required": ["userId", "authorName", "title", "prompt", "genre", "style", "mediaType", "aspectRatio", "tags", "likesCount", "createdAt", "updatedAt"]
+    },
+    "ThemeConfig": {
+      "title": "ThemeConfig",
+      "description": "Custom CSS theme configuration for application interface and card displays",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Owner Google user ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "Theme name"
+        },
+        "cssCode": {
+          "type": "string",
+          "description": "Raw CSS declarations for theme styling"
+        },
+        "isCurrentActive": {
+          "type": "boolean",
+          "description": "Whether this theme is active in the app"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of creation"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of last update"
+        }
+      },
+      "required": ["userId", "name", "cssCode", "isCurrentActive", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/folders/{folderId}": {
+      "schema": {
+        "$ref": "#/entities/Folder"
+      },
+      "description": "User custom folders and sketchbooks"
+    },
+    "/users/{userId}/creations/{creationId}": {
+      "schema": {
+        "$ref": "#/entities/Creation"
+      },
+      "description": "User saved anime artworks, videos, and GIFs"
+    },
+    "/users/{userId}/themes/{themeId}": {
+      "schema": {
+        "$ref": "#/entities/ThemeConfig"
+      },
+      "description": "User custom CSS interface and card styles"
+    },
+    "/community_creations/{creationId}": {
+      "schema": {
+        "$ref": "#/entities/CommunityCreation"
+      },
+      "description": "Public community gallery anime creations"
+    }
+  }
+}

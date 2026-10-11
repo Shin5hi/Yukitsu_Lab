@@ -1,0 +1,152 @@
+package com.example.data.anime
+
+data class AnimeTemplate(
+    val id: String,
+    val name: String,
+    val japaneseName: String,
+    val demographic: String,
+    val badgeColor: String,
+    val description: String,
+    val samplePrompt: String,
+    val defaultAspectRatio: String,
+    val defaultImageQuality: String,
+    val promptBoosterTags: String,
+    val recommendedEditorFx: String, // speedlines, halftone, aura, scanlines, sparkles, vignette, hud
+    val subtitleSampleJapanese: String,
+    val subtitleSampleSpanish: String,
+    val recommendedCssPreset: String
+)
+
+object AnimeTemplateCatalog {
+
+    val templates = listOf(
+        AnimeTemplate(
+            id = "template_shonen_battle",
+            name = "Batalla Épica Shōnen",
+            japaneseName = "熱血少年バトル",
+            demographic = "Shōnen",
+            badgeColor = "#FF2E63",
+            description = "Pose de ataque frontal con aura de energía llameante, iluminación de alto impacto y líneas de velocidad radiales.",
+            samplePrompt = "Guerrero con espada imbuida en llamas azules desatando su técnica final en ruinas místicas",
+            defaultAspectRatio = "16:9",
+            defaultImageQuality = "2K",
+            promptBoosterTags = "shonen anime masterpiece, intense action pose, blazing blue ki energy aura, dramatic upward angle, explosive dust particles, bold expressive line art, vibrant cinematic lighting",
+            recommendedEditorFx = "speedlines",
+            subtitleSampleJapanese = "「限界を超えて…俺が全てを終わらせる！」",
+            subtitleSampleSpanish = "¡Superando los límites... yo acabaré con esto!",
+            recommendedCssPreset = "Shonen Ki Crimson"
+        ),
+        AnimeTemplate(
+            id = "template_seinen_noir",
+            name = "Noir Psicológico Seinen",
+            japaneseName = "青年サイコノワール",
+            demographic = "Seinen",
+            badgeColor = "#7B2CBF",
+            description = "Contraste claroscuro profundo, texturas granuladas, lluvia urbana y mirada fría y reflexiva.",
+            samplePrompt = "Detective cibernético fumando bajo la lluvia en un callejón oscuro con reflejos de farolas",
+            defaultAspectRatio = "21:9",
+            defaultImageQuality = "4K",
+            promptBoosterTags = "seinen anime aesthetic, deep chiaroscuro lighting, heavy textured shadows, intricate hatching, rain-slicked concrete, neo-noir film grain, contemplative cold gaze, atmospheric melancholy",
+            recommendedEditorFx = "halftone",
+            subtitleSampleJapanese = "「この街に降り続く雨は、罪を洗い流しはしない。」",
+            subtitleSampleSpanish = "La lluvia incesante sobre esta ciudad jamás lavará sus pecados.",
+            recommendedCssPreset = "Manga Monochrome Halftone"
+        ),
+        AnimeTemplate(
+            id = "template_kodomo_fantasy",
+            name = "Aventura Mágica Kodomo",
+            japaneseName = "子供ワクワク大冒険",
+            demographic = "Kodomo",
+            badgeColor = "#06D6A0",
+            description = "Personajes con proporciones chibi y redondeadas, colores primarios cálidos y expresiones risueñas.",
+            samplePrompt = "Un pequeño zorrito con sombrero de mago y su amigo búho explorando un bosque de golosinas gigantes",
+            defaultAspectRatio = "1:1",
+            defaultImageQuality = "1K",
+            promptBoosterTags = "kodomo anime style, round cute character proportions, friendly joyful expressions, vivid saturated primary colors, soft fluffy textures, sunny magical whimsical fantasy world",
+            recommendedEditorFx = "sparkles",
+            subtitleSampleJapanese = "「さあ、みんなで秘密の宝物を探しに行こう！」",
+            subtitleSampleSpanish = "¡Vamos todos juntos a buscar el tesoro secreto!",
+            recommendedCssPreset = "Ghibli Pastoral Gouache"
+        ),
+        AnimeTemplate(
+            id = "template_shojo_starlight",
+            name = "Destello Estelar Shōjo",
+            japaneseName = "少女星屑マジック",
+            demographic = "Shōjo",
+            badgeColor = "#FF70A6",
+            description = "Partículas centelleantes, pétalos de cerezo flotando, trazos esbeltos y tonos pastel acuarelados.",
+            samplePrompt = "Chica mágica con vestido etéreo de cristal transformándose bajo un manto de constelaciones doradas",
+            defaultAspectRatio = "9:16",
+            defaultImageQuality = "2K",
+            promptBoosterTags = "shojo manga aesthetic, delicate slender linework, floating sakura blossom petals, glowing starry sparkles, soft pastel pink and lavender gradient, dreamy emotional gaze, ethereal beauty",
+            recommendedEditorFx = "sparkles",
+            subtitleSampleJapanese = "「星空の奇跡が、私の心を目覚めさせる。」",
+            subtitleSampleSpanish = "El milagro del firmamento estelar despierta mi corazón.",
+            recommendedCssPreset = "90s Retro Cel CRT"
+        ),
+        AnimeTemplate(
+            id = "template_josei_melancholy",
+            name = "Elegancia Urbana Josei",
+            japaneseName = "女性ドラマ・日常",
+            demographic = "Josei",
+            badgeColor = "#F9844A",
+            description = "Realismo sutil, acuarela contemporánea, vestuario de moda refinada y atmósfera madura de la vida cotidiana.",
+            samplePrompt = "Mujer joven mirando el atardecer desde la terraza de una cafetería en Tokio con un cuaderno de dibujo",
+            defaultAspectRatio = "4:3",
+            defaultImageQuality = "2K",
+            promptBoosterTags = "josei slice of life anime art, subtle naturalistic lighting, delicate watercolor wash background, high-fashion tailored coats, golden hour twilight, sophisticated quiet emotion",
+            recommendedEditorFx = "vignette",
+            subtitleSampleJapanese = "「日常の隙間に落ちている、小さな光を拾い集めて。」",
+            subtitleSampleSpanish = "Recogiendo las pequeñas luces que caen en los intersticios de la rutina.",
+            recommendedCssPreset = "Ghibli Pastoral Gouache"
+        ),
+        AnimeTemplate(
+            id = "template_retro_90s_cel",
+            name = "Acetato Clásico Años 90",
+            japaneseName = "90年代セル画・CRT",
+            demographic = "Retro",
+            badgeColor = "#FFD166",
+            description = "Estética analógica con colores saturados en acetato, grano de celuloide y textura de televisión de tubo CRT.",
+            samplePrompt = "Piloto espacial con chaqueta de cuero retro apoyada en su nave en un hangar oxidado",
+            defaultAspectRatio = "4:3",
+            defaultImageQuality = "1K",
+            promptBoosterTags = "vintage 1990s anime cel shading, authentic analog CRT monitor scanlines, saturated warm pigments, hand-inked line weight, nostalgic retro aesthetic, Cowboy Bebop and Trigun era",
+            recommendedEditorFx = "scanlines",
+            subtitleSampleJapanese = "「See You Space Cowboy... またな、相棒。」",
+            subtitleSampleSpanish = "Nos vemos, vaquero del espacio... Hasta luego, compañero.",
+            recommendedCssPreset = "90s Retro Cel CRT"
+        ),
+        AnimeTemplate(
+            id = "template_mecha_cyberpunk",
+            name = "Ciberpunk & Mecha Trigger",
+            japaneseName = "サイバーパンク・トリガー",
+            demographic = "Mecha",
+            badgeColor = "#00F0FF",
+            description = "Luces de neón ultravioleta, cables mecánicos complejos, aberración cromática e interfaz holográfica HUD.",
+            samplePrompt = "Armadura mecha experimental disparando rayos láser en una azotea de rascacielos de Neo-Tokyo",
+            defaultAspectRatio = "16:9",
+            defaultImageQuality = "4K",
+            promptBoosterTags = "Studio Trigger mecha anime style, hyper-saturated cyan and neon magenta, chromatic aberration, holographic HUD display overlay, intricate mechanical piston joints, explosive neon sparks",
+            recommendedEditorFx = "hud",
+            subtitleSampleJapanese = "「システム同調率100%…臨界点突破！」",
+            subtitleSampleSpanish = "Sincronización del sistema al 100%... ¡Rompiendo el punto crítico!",
+            recommendedCssPreset = "Neo-Tokyo Cyberpunk"
+        ),
+        AnimeTemplate(
+            id = "template_ghibli_nature",
+            name = "Naturaleza Mística Ghibli",
+            japaneseName = "ジブリ大自然・ファンタジー",
+            demographic = "Artístico",
+            badgeColor = "#48CAE4",
+            description = "Prados verdes ondulantes, nubes esponjosas pintadas con gouache tradicional y calidez nostálgica.",
+            samplePrompt = "Un tren de vapor sobre rieles sumergidos en agua cristalina atravesando colinas verdes con molinos de viento",
+            defaultAspectRatio = "16:9",
+            defaultImageQuality = "2K",
+            promptBoosterTags = "Studio Ghibli Hayao Miyazaki art style, lush hand-painted gouache scenery, fluffy voluminous summer cumulus clouds, sparkling crystal water reflection, peaceful pastoral nostalgia, warm natural sunlight",
+            recommendedEditorFx = "vignette",
+            subtitleSampleJapanese = "「風立ちぬ、いざ生きめやも。」",
+            subtitleSampleSpanish = "El viento se levanta... debemos intentar vivir.",
+            recommendedCssPreset = "Ghibli Pastoral Gouache"
+        )
+    )
+}
