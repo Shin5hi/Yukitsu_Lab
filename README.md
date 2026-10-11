@@ -1,4 +1,4 @@
-# 🌸 Yukitsu Studio (雪津スタジオ)
+# 🌸 Yukitsu_Lab (雪津スタジオ)
 ### Suite Integral de Creación de Animación Japonesa con IA
 
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com)
